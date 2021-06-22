@@ -1,7 +1,7 @@
 package graph
 
-// This file will not be regenerated automatically.
-//
-// It serves as dependency injection for your app, add any dependencies you require here.
+import "github.com/mkm29/my-awesome-project/src/pkg/todo"
 
-type Resolver struct{}
+type Resolver struct {
+	ToDo todo.ToDo
+}

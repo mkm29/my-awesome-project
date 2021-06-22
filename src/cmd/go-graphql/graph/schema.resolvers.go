@@ -12,6 +12,11 @@ import (
 )
 
 func (r *myMutationResolver) CreateTodo(ctx context.Context, todo model.TodoInput) (*model.Todo, error) {
+	if todo.Done == nil {
+		r.ToDo.Create(todo.Text, true)
+	} else {
+		r.ToDo.Create(todo.Text, false)
+	}
 	panic(fmt.Errorf("not implemented"))
 }
 
